@@ -83,7 +83,9 @@ flowchart LR
 | Geolocation | `SocaiCountries`, `SocaiProvinces`, `SocaiCities`, `SocaiAdresses` |
 | System | `SocaiLogs`, `SocaiLogTypes`, `SocaiLogSources`, `SocaiLogSeverities`, `SocaiFiles`, `SocaiFileTypes`, `SocaiSchedules`, `SocaiScheduleDetails`, `SocaiSubscriptionSchedules` |
 
+
 Each table, with its columns and relationships, is described in [`Documentacion.md`](Caso2DB/Documentacion.md). The full physical diagram is in [`DisenoFisico.pdf`](Caso2DB/DisenoFisico.pdf), and the scripts with their explanations are in [`Queries.md`](Caso2DB/Queries.md).
+
 ---
 
 ## Technology Stack
