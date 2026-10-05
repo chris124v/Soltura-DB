@@ -1,6 +1,6 @@
 <h1 align="center">Soltura – SQL Server DB</h1>
 
-Design and implementation in **SQL Server** of the database for *Soltura*, a subscription platform with benefits at partner businesses: users buy plans, redeem their benefits with a QR code, and the company settles payments with each business. It includes the 49-table data model, data population, T-SQL demonstrations, security, concurrency tests, and the migration of data from *Payment Assistant* (MySQL). Built for the **Databases I** course (Case #2). **Work in progress.**
+Design and implementation in **SQL Server** of the database for *Soltura*, a subscription platform with benefits at partner businesses: users buy plans, redeem their benefits with a QR code, and the company settles payments with each business. It includes the 49-table data model, data population, T-SQL demonstrations, security, concurrency tests, and the migration of data from *Payment Assistant* (MySQL). Built for the **Databases I** course (Case #2).
 
 <p align="center">
   <img src="Caso2DB/img/DisenoFisicoFinal.png" alt="Physical diagram of the Soltura database" width="95%">
@@ -42,9 +42,9 @@ Design and implementation in **SQL Server** of the database for *Soltura*, a sub
 ---
 
 ## Authors
-* **Christopher Daniel Vargas Villalta** – [@chris124v](https://github.com/chris124v)
-* Adrián Josué Barquero Sánchez
-* Santiago Calderón Zúñiga
+* Christopher Daniel Vargas Villalta, 2024108443
+* Adrián Josué Barquero Sánchez, 2024146907
+* Santiago Calderón Zúñiga, 2024089232
 
 **Course:** Databases I (*Bases de Datos I*)
 
@@ -83,8 +83,7 @@ flowchart LR
 | Geolocation | `SocaiCountries`, `SocaiProvinces`, `SocaiCities`, `SocaiAdresses` |
 | System | `SocaiLogs`, `SocaiLogTypes`, `SocaiLogSources`, `SocaiLogSeverities`, `SocaiFiles`, `SocaiFileTypes`, `SocaiSchedules`, `SocaiScheduleDetails`, `SocaiSubscriptionSchedules` |
 
-Each table, with its columns and relationships, is described in [`Documentacion.md`](Caso2DB/Documentacion.md). The full physical diagram is in [`DisenoFisico.pdf`](Caso2DB/DisenoFisico.pdf), and the scripts with their explanations are in [`Queries.md`](Caso2DB/Queries.md). The project documents are written in Spanish.
-
+Each table, with its columns and relationships, is described in [`Documentacion.md`](Caso2DB/Documentacion.md). The full physical diagram is in [`DisenoFisico.pdf`](Caso2DB/DisenoFisico.pdf), and the scripts with their explanations are in [`Queries.md`](Caso2DB/Queries.md).
 ---
 
 ## Technology Stack
@@ -139,7 +138,6 @@ Caso-2-BDI/
 
 ## Remaining Work
 - [ ] Write each team member's documentation: `DocumentacionB.md`, `DocumentacionC.md`, and `DocumentacionS.md` only contain a title.
-- [ ] Add the images referenced by `img/imagenesSanti.md` (`i1.jpeg`, `i2.jpeg`, `i3.jpeg`), which are not in the repository.
 - [ ] Fix the `vwResumenUsuarios` view definition in `Queries.md` (section 4.1), which has an extra `;` before the last condition. The `ConsultasMiscelaneas.sql` script is correct.
 - [ ] Update the name of the security script in `Queries.md` (section 3), which says `Scripts&Queries Mantenimiento de Seguridad.sql` while the file is named `QueryMantenimientoDeSeguridad.sql`.
 - [ ] Consolidate the scripts: there are duplicate or slightly different copies across `ScriptsBarquero`, `ScriptsChris`, `ScriptsSanti`, and `ScriptsQueries`. Keep a single final version, in execution order.
@@ -147,11 +145,4 @@ Caso-2-BDI/
 - [ ] Test the full migration end to end with the notebook and record its metrics.
 - [ ] Check against the case requirements that every requested query and demonstration is included.
 
----
 
-## What I Learned
-* How to design a large database for a real business, splitting the model into functional areas and documenting every table.
-* How to use advanced T-SQL features: cursors, triggers, indexed views, `MERGE`, transactional procedures, and JSON output.
-* How to protect a database with roles, permissions, Row-Level Security, and encryption of sensitive data.
-* How to reproduce and analyze concurrency problems such as deadlocks and isolation levels.
-* How to migrate data between two different engines (MySQL and SQL Server) with Python, and how to work as a team by splitting the work into areas.
